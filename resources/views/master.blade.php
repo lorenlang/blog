@@ -95,14 +95,12 @@
             @yield('content')
 
           
-          <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
+          {{--<a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>--}}
         
           
         </div>
       </div>
-                                                                                       
-	                                                
-                                                      
+
    	</div><!--/col-12-->
   </div>
 </div>

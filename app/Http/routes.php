@@ -36,5 +36,5 @@ Route::controllers([
 
 Route::any('share/{id}/{service}', function($id, $service) {
     $post = \App\Post::findOrFail($id);
-//    dd($service);
+//    dd($id, $service);
 });

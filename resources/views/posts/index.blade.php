@@ -20,7 +20,7 @@
 
                         <p class="lead">
 
-                            @include('posts/partials/share')
+{{--                            @include('posts/partials/share')--}}
 
                             <a href="{{ url('posts', $post->slug) }}" class="btn btn-default pull-right" role="button">Read More</a>
                         </p>
@@ -31,8 +31,8 @@
                         </p>
                         <ul class="list-inline">
                             <li><a href="#">{{ $post->published_at->diffForHumans() }}</a></li>
-                            <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 4 Comments</a></li>
-                            <li><a href="#"><i class="glyphicon glyphicon-share"></i> 34 Shares</a></li>
+                            {{--<li><a href="#"><i class="glyphicon glyphicon-comment"></i> 4 Comments</a></li>--}}
+                            {{--<li><a href="#"><i class="glyphicon glyphicon-share"></i> 34 Shares</a></li>--}}
                         </ul>
                     </div>
                     <div class="col-xs-3"></div>

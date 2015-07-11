@@ -103,7 +103,7 @@ a, a:hover {
 
 .panel .lead {
     overflow: hidden;
-    height: 90px;
+    /*height: 90px;*/
 }
 
 .label-float {
