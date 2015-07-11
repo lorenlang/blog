@@ -1,17 +1,17 @@
 <a target="_blank" title="Share on Twitter"
-   href="http://twitter.com/?status={{ rawurlencode($post->title) }} {{ url('posts/' . $post->slug) }}"><i class="icon-twitter"></i></a>
+   href="http://twitter.com/?status={{ rawurlencode($post->title) }} {{ url('posts/' . $post->slug) }}"><i class="share-icon-twitter"></i></a>
 <a target="_blank" title="Share on Facebook"
-   href="http://www.facebook.com/sharer/sharer.php?u={{ url('posts/' . $post->slug) }}"><i class="icon-facebook"></i></a>
+   href="http://www.facebook.com/sharer/sharer.php?u={{ url('posts/' . $post->slug) }}"><i class="share-icon-facebook"></i></a>
 <a target="_blank" title="Share on Google+"
-   href="https://plus.google.com/share?url={{ url('posts/' . $post->slug) }}"><i class="icon-google-plus"></i></a>
+   href="https://plus.google.com/share?url={{ url('posts/' . $post->slug) }}"><i class="share-icon-google-plus"></i></a>
 <a target="_blank" title="Share on StumbleUpon"
-   href="http://www.stumbleupon.com/submit?url={{ url('posts/' . $post->slug) }}"><i class="icon-stumbleupon"></i></a>
+   href="http://www.stumbleupon.com/submit?url={{ url('posts/' . $post->slug) }}"><i class="share-icon-stumbleupon"></i></a>
 <a target="_blank" title="Share on LinkedIn"
-   href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ url('posts/' . $post->slug) }}&amp;title={{ rawurlencode($post->title) }}"><i class="icon-linkedin"></i></a>
+   href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ url('posts/' . $post->slug) }}&amp;title={{ rawurlencode($post->title) }}"><i class="share-icon-linkedin"></i></a>
 <a target="_blank" title="Share on Reddit"
-   href="http://reddit.com/submit?url={{ url('posts/' . $post->slug) }}&amp;title={{ rawurlencode($post->title) }}"><i class="icon-reddit"></i></a>
+   href="http://reddit.com/submit?url={{ url('posts/' . $post->slug) }}&amp;title={{ rawurlencode($post->title) }}"><i class="share-icon-reddit"></i></a>
 <a target="_blank" title="Share by Email"
-   href="mailto:?subject={{ rawurlencode($post->title) }}&amp;body={{ rawurlencode($post->title) }}: {{ url('posts/' . $post->slug) }}"><i class="icon-email"></i></a>
+   href="mailto:?subject={{ rawurlencode($post->title) }}&amp;body={{ rawurlencode($post->title) }}: {{ url('posts/' . $post->slug) }}"><i class="share-icon-email"></i></a>
 
 
 

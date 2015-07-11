@@ -260,30 +260,30 @@ a, a:hover {
 
 /* ---------------------- */
 
-.icon-twitter:before {
+.share-icon-twitter:before {
      content: url("/icons/Twitter-24.png");
 }
 
-.icon-facebook:before {
+.share-icon-facebook:before {
     content: url("/icons/Facebook-24.png");
 }
 
-.icon-google-plus:before {
+.share-icon-google-plus:before {
     content: url("/icons/GooglePlus-24.png");
 }
 
-.icon-stumbleupon:before {
+.share-icon-stumbleupon:before {
     content: url("/icons/StumbleUpon-24.png");
 }
 
-.icon-linkedin:before {
+.share-icon-linkedin:before {
     content: url("/icons/LinkedIn-24.png");
 }
 
-.icon-reddit:before {
+.share-icon-reddit:before {
     content: url("/icons/Reddit-24.png");
 }
 
-.icon-email:before {
+.share-icon-email:before {
     content: url("/icons/Misc_Mail_02-24.png");
 }
