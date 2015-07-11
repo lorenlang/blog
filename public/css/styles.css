@@ -1,0 +1,289 @@
+/* import webfont definitions */
+@import url(/css/shaky.css);
+@import url(/css/rocksalt.css);
+
+/*@import url(/css/greg.css);*/
+
+.navbar-form input, .form-inline input {
+    width: auto;
+}
+
+body {
+    padding-top: 50px;
+}
+
+footer {
+    margin-top: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #ededed;
+}
+
+#masthead {
+    min-height: 199px;
+}
+
+#masthead h1 {
+    font-family: 'shaky_hand_some_comic3d';
+    font-size: 55px;
+    line-height: 1;
+    margin-top: 50px;
+}
+
+#masthead h1 p.lead {
+    /*font-family: 'gregs_other_handregular';*/
+    font-family: 'shaky_hand_some_comicregular';
+}
+
+#masthead .well {
+    margin-top: 31px;
+    min-height: 127px;
+}
+
+.navbar.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.story-img {
+    margin-top: 25%;
+    display: block;
+}
+
+h2, h3, h4 {
+    /*font-family: 'gregs_other_handregular';*/
+    font-family: 'rock_saltregular';
+}
+
+a, a:hover {
+    color: #223344;
+    text-decoration: none;
+}
+
+.icon-bar {
+    background-color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+    #masthead h1 {
+        font-size: 80px;
+    }
+}
+
+.dropdown-menu {
+    min-width: 250px;
+}
+
+.panel {
+    border-color: transparent;
+    border-radius: 0;
+}
+
+.thumbnail {
+    margin-bottom: 8px;
+}
+
+.img-container {
+    overflow: hidden;
+    height: 170px;
+}
+
+.img-container img {
+    min-width: 280px;
+    min-height: 180px;
+    max-width: 380px;
+    max-height: 280px;
+}
+
+.txt-container {
+    overflow: hidden;
+    height: 100px;
+}
+
+.panel .lead {
+    overflow: hidden;
+    height: 90px;
+}
+
+.label-float {
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    opacity: .9;
+    padding: 6px;
+    color: #fff;
+}
+
+/*.btn-twitter {*/
+    /*background-color: #4099FF;*/
+    /*color: #fff;*/
+/*}*/
+
+/*.btn-facebook {*/
+    /*background-color: #3B5998;*/
+    /*color: #fff;*/
+/*}*/
+
+/*.btn-googleplus {*/
+    /*background-color: #d34836;*/
+    /*color: #fff;*/
+/*}*/
+
+/*.btn-linkedin {*/
+    /*background-color: #1985BC;*/
+    /*color: #fff;*/
+/*}*/
+
+/*.btn-twitter:hover {*/
+    /*background-color: #3088FF;*/
+    /*color: #62BBFF;*/
+/*}*/
+
+/*.btn-facebook:hover {*/
+    /*background-color: #2A4998;*/
+    /*color: #4C6BBA;*/
+/*}*/
+
+/*.btn-googleplus:hover {*/
+    /*background-color: #C23836;*/
+    /*color: #E45A58;*/
+/*}*/
+
+/*.btn-linkedin:hover {*/
+    /*background-color: #3088FF;*/
+    /*color: #62BBFF;*/
+/*}*/
+
+/* ---------------------- */
+
+/*.btn-twitter {*/
+    /*background: #55ACEE;*/
+    /*color: #fff*/
+/*}*/
+
+/*.btn-twitter:link, .btn-twitter:visited {*/
+    /*color: #fff*/
+/*}*/
+
+/*.btn-twitter:active, .btn-twitter:hover {*/
+    /*background: #0087bd;*/
+    /*color: #fff*/
+/*}*/
+
+/*.btn-facebook {*/
+    /*background: #3A5795;*/
+    /*color: #fff*/
+/*}*/
+
+/*.btn-facebook:link, .btn-facebook:visited {*/
+    /*color: #fff*/
+/*}*/
+
+/*.btn-facebook:active, .btn-facebook:hover {*/
+    /*background: #30477a;*/
+    /*color: #fff*/
+/*}*/
+
+/*.btn-google-plus {*/
+    /*background: #e93f2e;*/
+    /*color: #fff*/
+/*}*/
+
+/*.btn-google-plus:link, .btn-google-plus:visited {*/
+    /*color: #fff*/
+/*}*/
+
+/*.btn-google-plus:active, .btn-google-plus:hover {*/
+    /*background: #ba3225;*/
+    /*color: #fff*/
+/*}*/
+
+/*.btn-stumbleupon {*/
+    /*background: #EA4B24;*/
+    /*color: #fff*/
+/*}*/
+
+/*.btn-stumbleupon:link, .btn-stumbleupon:visited {*/
+    /*color: #fff*/
+/*}*/
+
+/*.btn-stumbleupon:active, .btn-stumbleupon:hover {*/
+    /*background: #c7371e;*/
+    /*color: #fff*/
+/*}*/
+
+/*.btn-linkedin {*/
+    /*background: #0077B5;*/
+    /*color: #fff*/
+/*}*/
+
+/*.btn-linkedin:link, .btn-linkedin:visited {*/
+    /*color: #fff*/
+/*}*/
+
+/*.btn-linkedin:active, .btn-linkedin:hover {*/
+    /*background: #0b6087;*/
+    /*color: #fff*/
+/*}*/
+
+/*.btn-reddit {*/
+    /*background: #CEE3F8;*/
+    /*color: #fff*/
+/*}*/
+
+/*.btn-email:link, .btn-email:visited {*/
+    /*color: #fff*/
+/*}*/
+
+/*.btn-email:active, .btn-email:hover {*/
+    /*background: #0b6087;*/
+    /*color: #fff*/
+/*}*/
+
+/*.btn-email {*/
+    /*background: #000000;*/
+    /*color: #fff*/
+/*}*/
+
+/*.btn-email:link, .btn-email:visited {*/
+    /*color: #fff*/
+/*}*/
+
+/*.btn-email:active, .btn-email:hover {*/
+    /*background: #0b6087;*/
+    /*color: #fff*/
+/*}*/
+
+
+/* ---------------------- */
+
+.icon-twitter:before {
+     content: url("/icons/Twitter-24.png");
+}
+
+.icon-facebook:before {
+    content: url("/icons/Facebook-24.png");
+}
+
+.icon-google-plus:before {
+    content: url("/icons/GooglePlus-24.png");
+}
+
+.icon-stumbleupon:before {
+    content: url("/icons/StumbleUpon-24.png");
+}
+
+.icon-linkedin:before {
+    content: url("/icons/LinkedIn-24.png");
+}
+
+.icon-reddit:before {
+    content: url("/icons/Reddit-24.png");
+}
+
+.icon-email:before {
+    content: url("/icons/Misc_Mail_02-24.png");
+}

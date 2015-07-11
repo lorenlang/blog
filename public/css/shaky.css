@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'shaky_hand_some_comic3d';
+    src: url('/fonts/shaky/shaky_hand_some_comic_3d-webfont.eot');
+    src: url('/fonts/shaky/shaky_hand_some_comic_3d-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/shaky/shaky_hand_some_comic_3d-webfont.woff2') format('woff2'),
+    url('/fonts/shaky/shaky_hand_some_comic_3d-webfont.woff') format('woff'),
+    url('/fonts/shaky/shaky_hand_some_comic_3d-webfont.ttf') format('truetype'),
+    url('/fonts/shaky/shaky_hand_some_comic_3d-webfont.svg#shaky_hand_some_comic3d') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'shaky_hand_some_comicregular';
+    src: url('/fonts/shaky/shaky_hand_some_comic-webfont.eot');
+    src: url('/fonts/shaky/shaky_hand_some_comic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/shaky/shaky_hand_some_comic-webfont.woff2') format('woff2'),
+    url('/fonts/shaky/shaky_hand_some_comic-webfont.woff') format('woff'),
+    url('/fonts/shaky/shaky_hand_some_comic-webfont.ttf') format('truetype'),
+    url('/fonts/shaky/shaky_hand_some_comic-webfont.svg#shaky_hand_some_comicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

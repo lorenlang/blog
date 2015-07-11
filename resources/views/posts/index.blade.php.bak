@@ -1,0 +1,17 @@
+@extends('master')
+
+@section('content')
+
+    @foreach($posts as $post)
+      <article>
+          <h2 class="post-title">
+              <a href="{{ url('posts', $post->slug) }}">{{ $post->title }}</a>
+          </h2>
+
+          <div class="post-body">{{ $post->body }}</div>
+
+          <div class="post-pub-date">{{ $post->published_at }}</div>
+      </article>
+    @endforeach
+
+@stop

@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'gregs_other_handregular';
+    src: url('/fonts/gregs_other_hand-webfont.eot');
+    src: url('/fonts/gregs_other_hand-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/gregs_other_hand-webfont.woff2') format('woff2'),
+    url('/fonts/gregs_other_hand-webfont.woff') format('woff'),
+    url('/fonts/gregs_other_hand-webfont.ttf') format('truetype'),
+    url('/fonts/gregs_other_hand-webfont.svg#gregs_other_handregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

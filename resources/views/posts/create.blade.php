@@ -1,0 +1,17 @@
+@extends('master')
+
+@section('content')
+
+    <h1>Create new blog post</h1>
+
+    <hr/>
+
+    @include('posts/partials/messages')
+
+    {!! Form::open(['url' => 'posts']) !!}
+
+    @include('posts/partials/form', ['pubDate' => $now])
+
+    {!! Form::close() !!}
+
+@stop
