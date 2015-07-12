@@ -12,7 +12,6 @@
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
         <link href="{{URL::asset('css/styles.css')}}" rel="stylesheet">
-		{{--<link href="css/styles.css" rel="stylesheet">--}}
 	</head>
 	<body>
 <header class="navbar navbar-default navbar-fixed-top" role="banner">
@@ -26,6 +25,7 @@
       </button>
       <a href="/" class="navbar-brand">Home</a>
     </div>
+{{--
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
         <li>
@@ -52,6 +52,7 @@
         </li>
       </ul>
     </nav>
+--}}
   </div>
 </header>
 
@@ -64,16 +65,18 @@
           <p class="lead">Mom always said I'd lose it...</p>
         </h1>
       </div>
-      {{--<div class="col-md-5">--}}
-        {{--<div class="well well-lg"> --}}
-          {{--<div class="row">--}}
-            {{--<div class="col-sm-12">--}}
-              {{--Ad Space			--}}
-            {{--</div>--}}
-          {{--</div>--}}
-        {{--</div>--}}
-      {{--</div>--}}
-    </div> 
+{{--
+      <div class="col-md-5">
+        <div class="well well-lg">
+          <div class="row">
+            <div class="col-sm-12">
+              Ad Space
+            </div>
+          </div>
+        </div>
+      </div>
+--}}
+    </div>
   </div><!-- /cont -->
   
  
@@ -108,23 +111,25 @@
                                                                                 
 <hr>
 
-{{--<div class="container" id="footer">--}}
-  {{--<div class="row">--}}
-    {{--<div class="col col-sm-12">--}}
-      {{----}}
-      {{--<h4>Follow me</h4>--}}
-      {{--<div class="btn-group">--}}
-       {{--<a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>--}}
-	   {{--<a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>--}}
-	   {{--<a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>--}}
-	   {{--<a class="btn btn-linkedin btn-lg" href="#"><i class="icon-linkedin icon-large"></i> LinkedIn</a>--}}
-      {{--</div>--}}
-      {{----}}
-    {{--</div>--}}
-  {{--</div>--}}
-{{--</div>--}}
+{{--
+<div class="container" id="footer">
+  <div class="row">
+    <div class="col col-sm-12">
 
-{{--<hr>--}}
+      <h4>Follow me</h4>
+      <div class="btn-group">
+       <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
+	   <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
+	   <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+	   <a class="btn btn-linkedin btn-lg" href="#"><i class="icon-linkedin icon-large"></i> LinkedIn</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<hr>
+--}}
 
 <footer>
   <div class="container">
@@ -148,7 +153,6 @@
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <script src="{{URL::asset('js/bootstrap.min.js')}}"></script>
-        {{--<script src="js/bootstrap.min.js"></script>--}}
 
         <script>
             $('#flash-overlay-modal').modal();

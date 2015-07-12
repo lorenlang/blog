@@ -20,7 +20,7 @@
 
                         <p class="lead">
 
-{{--                            @include('posts/partials/share')--}}
+                            {{--@include('posts/partials/share')--}}
 
                             <a href="{{ url('posts', $post->slug) }}" class="btn btn-default pull-right" role="button">Read More</a>
                         </p>
