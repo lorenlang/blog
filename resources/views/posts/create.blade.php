@@ -8,7 +8,7 @@
 
     @include('posts/partials/messages')
 
-    {!! Form::open(['url' => 'posts']) !!}
+    {!! Form::open(['url' => 'posts', 'files' => true]) !!}
 
     @include('posts/partials/form', ['pubDate' => $now])
 
