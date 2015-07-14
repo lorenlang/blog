@@ -15,8 +15,9 @@ class Post extends \Eloquent
         'title',
         'body',
         'slug',
-        'image_path',
-        'image_caption',
+        'image',
+        'image_credit',
+        'thumbnail',
         'status',
         'published_at',
     ];

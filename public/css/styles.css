@@ -120,7 +120,7 @@ a, a:hover {
 /* ---------------------- */
 
 .share-icon-twitter:before {
-     content: url("/icons/Twitter-24.png");
+    content: url("/icons/Twitter-24.png");
 }
 
 .share-icon-facebook:before {
@@ -146,3 +146,19 @@ a, a:hover {
 .share-icon-email:before {
     content: url("/icons/Misc_Mail_02-24.png");
 }
+
+.panel-body > div#image-wrapper {
+    position: relative;
+}
+
+.image-credit {
+    bottom: 13px;
+    position: absolute;
+    right: -25px;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    writing-mode: lr-tb;
+}
+
+

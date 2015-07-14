@@ -57,9 +57,10 @@ class PostController extends Controller
     public function create()
     {
         $tags = Tag::lists('name', 'id');
+        $selectedTags = array();
         $now = Carbon::now();
 
-        return view('posts/create', compact('now', 'tags'));
+        return view('posts/create', compact('now', 'tags', 'selectedTags'));
     }
 
 
@@ -71,7 +72,14 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        return view('posts/edit', compact('post'));
+        $tags = Tag::lists('name', 'id');
+
+        $selectedTags = array();
+        foreach ($post->tags as $tag) {
+            $selectedTags[] = $tag->id;
+        }
+
+        return view('posts/edit', compact('post', 'tags', 'selectedTags'));
     }
 
 
@@ -83,7 +91,14 @@ class PostController extends Controller
      */
     public function store(PostRequest $request)
     {
-        $post = \Auth::user()->posts()->create($request->all());
+        $data = $request->except(['image', 'thumbnail']);
+        foreach ($request->files->all() as $key => $file) {
+            $file->move(public_path('images'), $file->getClientOriginalName());
+            $data[$key] = '/images/' . $file->getClientOriginalName();
+        }
+
+        $post = \Auth::user()->posts()->create($data);
+//        $post = \Auth::user()->posts()->create($request->all());
         $post->tags()->attach($request->input('tags'));
 
         flash()->success('The post has been successfully created');
@@ -99,10 +114,13 @@ class PostController extends Controller
      * @param PostRequest $request
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function update($id, PostRequest $request)
+    public function update(Post $post, PostRequest $request)
     {
-        $post = Post::findOrFail($id);
+//        dd($request);
+//        $post = Post::findOrFail($id);
         $post->update($request->all());
+
+        $post->tags()->sync($request->input('tags'));
 
         return redirect('posts/' . $post->id);
     }

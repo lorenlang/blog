@@ -21,9 +21,9 @@ class CreatePostsTable extends Migration
                 $table->string('title');
                 $table->text('body');
                 $table->string('slug');
-                $table->string('image_path')->nullable();
+                $table->string('image')->nullable();
                 $table->string('image_credit')->nullable();
-                $table->string('thumbnail_path')->nullable();
+                $table->string('thumbnail')->nullable();
                 $table->enum('status', ['draft', 'pending', 'published', 'deleted']);
                 $table->timestamp('published_at');
                 $table->timestamps();

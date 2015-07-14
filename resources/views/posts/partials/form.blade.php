@@ -19,8 +19,8 @@
 </div>
 
 <div class="form-group">
-    {!! Form::label('Image credit', 'Image credit:') !!}
-    {!! Form::text('Image credit', null, ['class' => 'form-control']) !!}
+    {!! Form::label('image_credit', 'Image credit:') !!}
+    {!! Form::text('image_credit', null, ['class' => 'form-control']) !!}
 </div>
 
 <div class="form-group">
@@ -30,7 +30,7 @@
 
 <div class="form-group">
     {!! Form::label('tags', 'Tags:') !!}
-    {!! Form::select('tags[]', $tags, null, ['class' => 'form-control', 'multiple']) !!}
+    {!! Form::select('tags[]', $tags, $selectedTags, ['class' => 'form-control', 'multiple']) !!}
 </div>
 
 <div class="form-group">
