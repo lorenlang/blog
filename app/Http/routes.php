@@ -33,3 +33,6 @@ Route::any('share/{id}/{service}', function($id, $service) {
     $post = \App\Post::findOrFail($id);
 //    dd($id, $service);
 });
+
+
+Route::get('feed', 'FeedController@feed');
