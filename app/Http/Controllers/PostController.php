@@ -57,10 +57,11 @@ class PostController extends Controller
     public function create()
     {
         $tags = Tag::lists('name', 'id');
-        $selectedTags = array();
+//        $selectedTags = array();
         $now = Carbon::now();
 
-        return view('posts/create', compact('now', 'tags', 'selectedTags'));
+        return view('posts/create', compact('now', 'tags'));
+//        return view('posts/create', compact('now', 'tags', 'selectedTags'));
     }
 
 
@@ -74,12 +75,13 @@ class PostController extends Controller
     {
         $tags = Tag::lists('name', 'id');
 
-        $selectedTags = array();
-        foreach ($post->tags as $tag) {
-            $selectedTags[] = $tag->id;
-        }
+//        $selectedTags = array();
+//        foreach ($post->tags as $tag) {
+//            $selectedTags[] = $tag->id;
+//        }
 
-        return view('posts/edit', compact('post', 'tags', 'selectedTags'));
+        return view('posts/edit', compact('post', 'tags'));
+//        return view('posts/edit', compact('post', 'tags', 'selectedTags'));
     }
 
 
@@ -98,8 +100,8 @@ class PostController extends Controller
         }
 
         $post = \Auth::user()->posts()->create($data);
-//        $post = \Auth::user()->posts()->create($request->all());
-        $post->tags()->attach($request->input('tags'));
+        $this->syncTags($post, $request->input('tag_list'));
+//        $post->tags()->attach($request->input('tag_list'));
 
         flash()->success('The post has been successfully created');
 
@@ -120,8 +122,18 @@ class PostController extends Controller
 //        $post = Post::findOrFail($id);
         $post->update($request->all());
 
-        $post->tags()->sync($request->input('tags'));
+        $this->syncTags($post, $request->input('tag_list'));
 
         return redirect('posts/' . $post->id);
+    }
+
+    /**
+     * Sync the list of tags int the database for a given post
+     * @param Post $post
+     * @param array $tags
+     */
+    private function syncTags(Post $post, array $tags)
+    {
+        $post->tags()->sync($tags);
     }
 }

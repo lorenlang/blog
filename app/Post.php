@@ -101,4 +101,15 @@ class Post extends \Eloquent
         return $this->belongsToMany('App\Tag')->withTimestamps();
     }
 
+
+    /**
+     * Get all tag ids for the given post
+     *
+     * @return mixed
+     */
+    public function getTagListAttribute()
+    {
+        return $this->tags->lists('id');
+    }
+
 }

@@ -131,6 +131,7 @@ return [
         'Illuminate\Html\HtmlServiceProvider',
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
         'Roumen\Feed\FeedServiceProvider',
+        'GrahamCampbell\Markdown\MarkdownServiceProvider',
         /*
          * Application Service Providers...
          */
@@ -191,6 +192,7 @@ return [
         'Html'      => 'Illuminate\Html\HtmlFacade',
         'Flash'     => 'Laracasts\Flash\Flash',
         'Feed'      => 'Roumen\Feed\Facades\Feed',
+        'Markdown' => 'GrahamCampbell\Markdown\Facades\Markdown',
     ],
 
 ];

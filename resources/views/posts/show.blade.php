@@ -8,7 +8,20 @@
     </div>
     <h2 id="page-title">{{ $post->title }}</h2>
     <article>
-        <div class="publish-date">{{ $post->published_at }}</div>
+        <div>
+
+            @unless($post->tags->isEmpty())
+                <p class="pull-right">
+                    @foreach($post->tags as $tag)
+                        <span class="label label-default">{{ $tag->name }}</span>
+                    @endforeach
+                </p>
+            @endunless
+
+            <p class="publish-date">{{ $post->published_at }}</p>
+
+        </div>
+
         <div class="post-body">{{ $post->body }}</div>
     </article>
 
