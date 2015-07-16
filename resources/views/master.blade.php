@@ -56,7 +56,7 @@
   </div>
 </header>
 
-<div id="masthead">  
+<div id="masthead">
   <div class="container">
     <div class="row">
       {{--<div class="col-md-7">--}}
@@ -78,17 +78,17 @@
 --}}
     </div>
   </div><!-- /cont -->
-  
- 
+
+
 </div>
 
 
 <div class="container">
   <div class="row">
-    
-    <div class="col-md-12"> 
-      
-      <div class="panel">
+
+      <div class="col-md-12">
+
+          <div class="panel">
         <div class="panel-body">
 
 
@@ -97,18 +97,18 @@
 
             @yield('content')
 
-          
+
           {{--<a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>--}}
-        
-          
+
+
         </div>
       </div>
 
    	</div><!--/col-12-->
   </div>
 </div>
-                                                
-                                                                                
+
+
 <hr>
 
 {{--
@@ -141,8 +141,9 @@
           {{--<li><i class="icon-google-plus icon-2x"></i></li>--}}
           {{--<li><i class="icon-pinterest icon-2x"></i></li>--}}
           <li><a href="https://www.linkedin.com/in/lorenlang"><i class="icon-linkedin icon-2x"></i></a></li>
+            <li><a href="http://wheresmyhead.com/feed"><i class="icon-rss icon-2x"></i></a></li>
         </ul>
-        
+
       </div>
       <div class="col-sm-6">
           {{--<p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a href="http://www.bootply.com">Bootply</a></p>      --}}
