@@ -19,7 +19,7 @@
 
                 <div class="row">
                     <div class="col-xs-9">
-                        <p>{{ $post->body }}</p>
+                        <p>{!! $post->body !!}</p>
 
                         <p class="lead">
 
