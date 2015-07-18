@@ -10,7 +10,7 @@
             <div class="col-md-2 col-sm-3 text-center">
                 <a class="story-img" href="{{ url('posts', $post->slug) }}">
                     @if($post->thumbnail)
-                        <img src="{{ $post->thumbnail }}" style="width:100px;height:100px" class="img-circle">
+                        <img src="/{{ $post->thumbnail }}" style="width:100px;height:100px" class="img-circle">
                     @endif
                 </a>
             </div>
