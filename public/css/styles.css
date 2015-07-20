@@ -56,8 +56,12 @@ h2, h3, h4 {
     font-family: 'rock_saltregular';
 }
 
+li {
+    margin-bottom: 10px;
+}
+
 a, a:hover {
-    color: #223344;
+    /*color: #223344;*/
     text-decoration: none;
 }
 
@@ -124,13 +128,13 @@ a, a:hover {
 }
 
 .share-icon-facebook:before {
+
     content: url("/icons/Facebook-24.png");
 }
 
 .share-icon-google-plus:before {
     content: url("/icons/GooglePlus-24.png");
 }
-
 .share-icon-stumbleupon:before {
     content: url("/icons/StumbleUpon-24.png");
 }
