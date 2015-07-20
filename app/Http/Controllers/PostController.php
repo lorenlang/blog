@@ -132,8 +132,10 @@ class PostController extends Controller
      * @param Post $post
      * @param array $tags
      */
-    private function syncTags(Post $post, array $tags)
+    private function syncTags(Post $post, array $tags = NULL)
     {
-        $post->tags()->sync($tags);
+        if ($tags) {
+            $post->tags()->sync($tags);
+        }
     }
 }
