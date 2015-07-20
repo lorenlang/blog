@@ -38,7 +38,7 @@
                         @endunless
 
                         <ul class="list-inline">
-                            <li><a href="#">{{ $post->published_at->diffForHumans() }}</a></li>
+                            <li>{{ $post->published_at->diffForHumans() }}</li>
                             {{--<li><a href="#"><i class="glyphicon glyphicon-comment"></i> 4 Comments</a></li>--}}
                             {{--<li><a href="#"><i class="glyphicon glyphicon-share"></i> 34 Shares</a></li>--}}
                         </ul>
