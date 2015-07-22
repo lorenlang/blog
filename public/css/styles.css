@@ -51,9 +51,14 @@ footer {
     display: block;
 }
 
-h2, h3, h4 {
+h2, h3, h4, .publish-date {
     /*font-family: 'gregs_other_handregular';*/
     font-family: 'rock_saltregular';
+}
+
+.publish-date {
+    font-size: 11px;
+    margin: 25px 0;
 }
 
 li {
