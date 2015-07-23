@@ -23,6 +23,14 @@ Route::get('admin', 'AdminController@index');
 Route::get('about', 'PageController@about');
 
 
+Route::get(
+	'archive',
+	function () {
+		return redirect('archive/index.html');
+	}
+);
+
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
