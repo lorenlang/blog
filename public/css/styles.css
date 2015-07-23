@@ -175,4 +175,8 @@ a, a:hover {
     writing-mode: lr-tb;
 }
 
-
+.poetry-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+}
