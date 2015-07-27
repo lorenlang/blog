@@ -15,7 +15,15 @@
 
 <div class="form-group">
     {!! Form::label('image','Main image:') !!}
-    {!! Form::file('image') !!}
+    <?php
+    // TODO: make this look for a value and show file upload if none. Edit method needs to handle storing them correctly.
+    // TODO: If filled, provide a way to remove the existing.
+    ?>
+    @if ($action == 'create')
+        {!! Form::file('image') !!}
+    @else
+        {!! Form::text('image', null, ['class' => 'form-control']) !!}
+    @endif
 </div>
 
 <div class="form-group">
@@ -25,7 +33,15 @@
 
 <div class="form-group">
     {!! Form::label('thumbnail','Thumbnail image:') !!}
-    {!! Form::file('thumbnail') !!}
+    <?php
+    // TODO: make this look for a value and show file upload if none. Edit method needs to handle storing them correctly.
+    // TODO: If filled, provide a way to remove the existing.
+    ?>
+    @if ($action == 'create')
+        {!! Form::file('thumbnail') !!}
+    @else
+        {!! Form::text('thumbnail', null, ['class' => 'form-control']) !!}
+    @endif
 </div>
 
 <div class="form-group">

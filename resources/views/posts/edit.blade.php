@@ -10,7 +10,7 @@
 
     {!! Form::model($post, ['method' => 'PATCH', 'url' => 'posts/'.$post->id]) !!}
 
-    @include('posts/partials/form', ['pubDate' => null])
+    @include('posts/partials/form', ['action' => 'edit', 'pubDate' => null])
 
     {!! Form::close() !!}
 

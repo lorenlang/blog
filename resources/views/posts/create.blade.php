@@ -10,7 +10,7 @@
 
     {!! Form::open(['url' => 'posts', 'files' => true]) !!}
 
-    @include('posts/partials/form', ['pubDate' => $now])
+    @include('posts/partials/form', ['action' => 'edit', 'pubDate' => $now])
 
     {!! Form::close() !!}
 
