@@ -180,3 +180,19 @@ a, a:hover {
     font-weight: bold;
     text-decoration: underline;
 }
+
+.poetry-indent-1 {
+    padding-left: 3em;
+}
+
+.poetry-indent-2 {
+    padding-left: 6em;
+}
+
+.poetry-indent-3 {
+    padding-left: 9em;
+}
+
+div#pagination-wrapper {
+    text-align: center;
+}
