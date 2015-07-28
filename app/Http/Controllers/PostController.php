@@ -21,13 +21,12 @@ class PostController extends Controller
 
     /**
      * Front page - show all posts
-     * TODO: Add pogination to this
      *
      * @return \Illuminate\View\View
      */
     public function index()
     {
-        $posts = Post::latest('published_at')->published()->get();
+        $posts = Post::latest('published_at')->published()->paginate(5);
 
         return view('posts/index', compact('posts'));
     }

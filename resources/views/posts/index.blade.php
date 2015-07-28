@@ -52,4 +52,7 @@
 
     @endforeach
 
+    <div id="pagination-wrapper">
+        {!! $posts->render() !!}
+    </div>
 @stop
