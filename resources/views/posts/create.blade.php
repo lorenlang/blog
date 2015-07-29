@@ -1,5 +1,9 @@
 @extends('master')
 
+@section('title')
+    Create Post |
+@stop
+
 @section('content')
 
     <h1>Create new blog post</h1>

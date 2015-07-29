@@ -1,5 +1,9 @@
 @extends('master')
 
+@section('title')
+    Edit Post |
+@stop
+
 @section('content')
 
     <h1>Edit blog post: {!! $post->title !!}</h1>

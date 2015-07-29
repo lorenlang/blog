@@ -1,5 +1,9 @@
 @extends('master')
 
+@section('title')
+    {{ $post->title }} |
+@stop
+
 @section('content')
 
     <div id="image-wrapper">
