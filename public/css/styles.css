@@ -196,3 +196,13 @@ a, a:hover {
 div#pagination-wrapper {
     text-align: center;
 }
+
+@media only screen and (max-device-width: 533px) {
+
+    .poetry-indent-1,
+    .poetry-indent-2,
+    .poetry-indent-3 {
+        padding-left: 0;
+    }
+
+}
