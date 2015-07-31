@@ -12,53 +12,11 @@
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
         <link href="{{URL::asset('css/styles.css')}}" rel="stylesheet">
+        <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet"/>
 	</head>
 	<body>
-<header class="navbar navbar-default navbar-fixed-top" role="banner">
-  <div class="container">
-    <div class="navbar-header">
-      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="/" class="navbar-brand">Home</a>
-    </div>
 
-    <nav class="collapse navbar-collapse" role="navigation">
-      <ul class="nav navbar-nav">
-        <li>
-            <a href="/archive/index.html">Archive</a>
-        </li>
-          {{--
-                  <li>
-                    <a href="#">Category</a>
-                  </li>
-                  <li>
-                    <a href="#">Category</a>
-                  </li>
-                  <li>
-                    <a href="#">Category</a>
-                  </li>
-          --}}
-      </ul>
-        {{--
-              <ul class="nav navbar-right navbar-nav">
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
-                  <ul class="dropdown-menu" style="padding:12px;">
-                    <form class="form-inline">
-                      <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
-                    </form>
-                  </ul>
-                </li>
-              </ul>
-        --}}
-    </nav>
-
-  </div>
-</header>
+    @include('partials/header')
 
 <div id="masthead">
   <div class="container">
@@ -135,36 +93,19 @@
 <hr>
 --}}
 
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        <ul class="list-inline">
-          {{--<li><i class="icon-facebook icon-2x"></i></li>--}}
-          <li><a href="https://twitter.com/lorenlang"><i class="icon-twitter icon-2x"></i></a></li>
-          {{--<li><i class="icon-google-plus icon-2x"></i></li>--}}
-          {{--<li><i class="icon-pinterest icon-2x"></i></li>--}}
-          <li><a href="https://www.linkedin.com/in/lorenlang"><i class="icon-linkedin icon-2x"></i></a></li>
-            <li><a href="http://wheresmyhead.com/feed"><i class="icon-rss icon-2x"></i></a></li>
-        </ul>
+    @include('partials/footer')
 
-      </div>
-      <div class="col-sm-6">
-          {{--<p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a href="http://www.bootply.com">Bootply</a></p>      --}}
-      </div>
-    </div>
-  </div>
-</footer>
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <script src="{{URL::asset('js/bootstrap.min.js')}}"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
 
         <script>
             $('#flash-overlay-modal').modal();
             $('div.alert').not('.alert-important').delay(3000).slideUp(300);
         </script>
-
-@include ('/partials/piwik')
+    @yield('scripts')
+    @include ('/partials/piwik')
 
 	</body>
 </html>

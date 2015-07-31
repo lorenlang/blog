@@ -46,9 +46,25 @@
 
 <div class="form-group">
     {!! Form::label('tag_list', 'Tags:') !!}
-    {!! Form::select('tag_list[]', $tags, null, ['class' => 'form-control', 'multiple']) !!}
+    {!! Form::select('tag_list[]', $tags, null, ['id' => 'tag_list', 'class' => 'form-control', 'multiple']) !!}
 </div>
 
 <div class="form-group">
     {!! Form::submit('Save', ['class' => 'btn btn-primary form-control']) !!}
 </div>
+
+@section('scripts')
+    <script>
+        $('#tag_list').select2({
+            placeholder: 'No tags selected...',
+            tags: true,
+            tokenSeparators: [',', ' '],
+            createTag: function (newTag) {
+                return {
+                    id: 'new:' + newTag.term,
+                    text: newTag.term + ' (new)'
+                };
+            }
+        });
+    </script>
+@endsection
