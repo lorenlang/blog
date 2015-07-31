@@ -128,13 +128,36 @@ class PostController extends Controller
 
     /**
      * Sync the list of tags int the database for a given post
+     *
      * @param Post $post
      * @param array $tags
      */
     private function syncTags(Post $post, array $tags = NULL)
     {
-        if ($tags) {
-            $post->tags()->sync($tags);
+        if (!$tags) {
+            $post->tags()->detach();
+            return;
         }
+
+        $tags = $this->createNewTags($tags);
+
+        $post->tags()->sync($tags);
+    }
+
+    /**
+     * Parse the tag list for new entries and create as needed
+     *
+     * @param array $tags
+     * @return mixed
+     */
+    private function createNewTags(array $tags)
+    {
+        foreach ($tags as &$tag) {
+            if (substr($tag, 0, 4) == 'new:') {
+                $newTag = Tag::create(['name' => substr($tag, 4)]);
+                $tag    = $newTag->id;
+            }
+        }
+        return $tags;
     }
 }

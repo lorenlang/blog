@@ -4,6 +4,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tag extends Model {
 
+    protected $fillable = [
+        'name',
+    ];
+
     /**
      * Get all posts that have the given tag
      *
