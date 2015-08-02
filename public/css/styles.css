@@ -181,15 +181,15 @@ a, a:hover {
     text-decoration: underline;
 }
 
-.poetry-indent-1 {
+.indent-1 {
     padding-left: 3em;
 }
 
-.poetry-indent-2 {
+.indent-2 {
     padding-left: 6em;
 }
 
-.poetry-indent-3 {
+.indent-3 {
     padding-left: 9em;
 }
 
@@ -199,9 +199,9 @@ div#pagination-wrapper {
 
 @media only screen and (max-device-width: 533px) {
 
-    .poetry-indent-1,
-    .poetry-indent-2,
-    .poetry-indent-3 {
+    .indent-1,
+    .indent-2,
+    .indent-3 {
         padding-left: 0;
     }
 
