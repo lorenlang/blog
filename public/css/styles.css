@@ -75,6 +75,10 @@ a, a:hover {
     text-decoration: none;
 }
 
+.italic {
+    font-style: italic;
+}
+
 .icon-bar {
     background-color: #fff;
 }
