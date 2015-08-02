@@ -141,6 +141,7 @@ return [
         'App\Providers\EventServiceProvider',
         'App\Providers\RouteServiceProvider',
         'Laracasts\Flash\FlashServiceProvider',
+        'App\Providers\HelperServiceProvider',
 
     ],
     /*
@@ -193,6 +194,7 @@ return [
         'Flash'     => 'Laracasts\Flash\Flash',
         'Feed'      => 'Roumen\Feed\Facades\Feed',
         'Markdown' => 'GrahamCampbell\Markdown\Facades\Markdown',
+        'Text'     => 'App\Helpers\Text',
     ],
 
 ];
