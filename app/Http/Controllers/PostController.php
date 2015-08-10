@@ -123,7 +123,7 @@ class PostController extends Controller
 
         $this->syncTags($post, $request->input('tag_list'));
 
-        return redirect('posts/' . $post->id);
+        return redirect('posts/' . $post->slug);
     }
 
     /**
