@@ -75,6 +75,10 @@ a, a:hover {
     text-decoration: none;
 }
 
+p {
+    margin: 0 0 20px;
+}
+
 blockquote {
     padding: 10px 20px;
     margin: 0 0 20px;

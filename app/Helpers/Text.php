@@ -9,6 +9,8 @@
 namespace App\Helpers;
 
 
+use GrahamCampbell\Markdown\Facades\Markdown;
+
 class Text
 {
 
@@ -64,5 +66,11 @@ class Text
 //    {
 //        return first_n_words($text, $number_of_words);
 //    }
+
+
+    public static function renderMarkdown($text)
+    {
+        return Markdown::convertToHtml($text);
+    }
 
 }

@@ -28,7 +28,7 @@
 
         </div>
 
-        <div class="post-body">{!! $post->body !!}</div>
+        <div class="post-body">{!! Text::renderMarkdown($post->body) !!}</div>
     </article>
 
 @stop
