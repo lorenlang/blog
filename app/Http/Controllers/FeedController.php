@@ -4,6 +4,7 @@
 //use App\Http\Controllers\Controller;
 //
 //use Illuminate\Http\Request;
+use App\Helpers\Text;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\URL;
 use Roumen\Feed\Facades\Feed;
