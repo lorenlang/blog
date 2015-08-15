@@ -23,7 +23,8 @@ class FeedController extends Controller
         // check if there is cached feed and build new only if is not
         if (!$feed->isCached()) {
             // creating rss feed with our most recent 20 posts
-            $posts = DB::table('posts')->orderBy('published_at', 'desc')->take(20)->get();
+            $posts = DB::table('posts')->orderBy('published_at', 'desc')->where('published_at', '<=',
+                Carbon::now())->take(20)->get();
 
             // set your feed's title, description, link, pubdate and language
             $feed->title       = "Where's My Head?";
