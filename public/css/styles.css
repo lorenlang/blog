@@ -85,6 +85,10 @@ blockquote {
     border-left: 5px solid #ddd;
 }
 
+hr {
+    border-color: #ccc;
+}
+
 .italic {
     font-style: italic;
 }
@@ -122,6 +126,14 @@ blockquote {
     min-height: 180px;
     max-width: 380px;
     max-height: 280px;
+}
+
+.img-right {
+    padding-left: 15px;
+}
+
+.img-left {
+    padding-right: 15px;
 }
 
 .txt-container {
