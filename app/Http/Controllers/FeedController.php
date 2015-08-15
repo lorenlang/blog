@@ -5,6 +5,7 @@
 //
 //use Illuminate\Http\Request;
 use App\Helpers\Text;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\URL;
 use Roumen\Feed\Facades\Feed;
@@ -23,8 +24,8 @@ class FeedController extends Controller
         // check if there is cached feed and build new only if is not
         if (!$feed->isCached()) {
             // creating rss feed with our most recent 20 posts
-            $posts = DB::table('posts')->orderBy('published_at', 'desc')->where('published_at', '<=',
-                Carbon::now())->take(20)->get();
+            $posts = DB::table('posts')->where('published_at', '<=', Carbon::now())->orderBy('published_at',
+                'desc')->take(20)->get();
 
             // set your feed's title, description, link, pubdate and language
             $feed->title       = "Where's My Head?";
