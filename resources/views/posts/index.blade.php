@@ -19,7 +19,8 @@
 
                 <div class="row">
                     <div class="col-xs-9">
-                        <p>{!! Text::renderMarkdown($post->body) !!}</p>
+                        <p>{!! Text::renderMarkdown(Text::excerpt($post->body)) !!}</p>
+                        {{--                        <p>{!! Text::renderMarkdown($post->body) !!}</p>--}}
 
                         <p class="lead">
 

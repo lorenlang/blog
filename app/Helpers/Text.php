@@ -33,7 +33,7 @@ class Text
 
 
 // just the excerpt
-    public static function excerpt($text, $number_of_words = 50)
+    public static function excerpt($text, $number_of_words = 100, $suffix = '&hellip;')
     {
         // Where excerpts are concerned, HTML tends to behave
         // like the proverbial ogre in the china shop, so best to strip that
@@ -45,7 +45,7 @@ class Text
         $text = preg_replace("/^\W*((\w[\w'-]*\b\W*){1,$number_of_words}).*/ms", '\\1', $text);
 
         // strip out newline characters from our excerpt
-        return str_replace("\n", "", $text);
+        return str_replace("\n", "", $text) . $suffix;
     }
 
     /*
