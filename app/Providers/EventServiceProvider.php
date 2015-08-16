@@ -14,6 +14,9 @@ class EventServiceProvider extends ServiceProvider {
 		'event.name' => [
 			'EventListener',
 		],
+        'App\Events\PostWasViewed' => [
+            'App\Handlers\Events\IncrementPostViewCounter',
+        ],
 	];
 
 	/**

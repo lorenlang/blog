@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Events\PostWasViewed;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PostRequest;
@@ -43,6 +44,8 @@ class PostController extends Controller
         if (!$post->exists) {
             return \Response::view('errors/404', array(), 404);
         }
+
+        event(new PostWasViewed($post));
 
         return view('posts/show', compact('post'));
     }
