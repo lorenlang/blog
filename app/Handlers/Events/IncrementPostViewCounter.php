@@ -30,9 +30,11 @@ class IncrementPostViewCounter
      */
     public function handle(PostWasViewed $event)
     {
-        if (!$this->postViewedThisSession($event->post)) {
-            $event->post->increment('view_counter');
-            $this->storePostIdInSession($event->post);
+        if (!\BrowserDetect::isBot()) {
+            if (!$this->postViewedThisSession($event->post)) {
+                $event->post->increment('view_counter');
+                $this->storePostIdInSession($event->post);
+            }
         }
     }
 
