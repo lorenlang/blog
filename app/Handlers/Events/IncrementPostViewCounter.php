@@ -30,7 +30,7 @@ class IncrementPostViewCounter
      */
     public function handle(PostWasViewed $event)
     {
-        if (!\BrowserDetect::isBot()) {
+        if (!\BrowserDetect::isBot() && !(substr(\BrowserDetect::detect(), 0, 5) == 'curl/')) {
             if (!$this->postViewedThisSession($event->post)) {
                 $event->post->increment('view_counter');
                 $this->storePostIdInSession($event->post);
