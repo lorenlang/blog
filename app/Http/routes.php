@@ -36,3 +36,12 @@ Route::any('share/{id}/{service}', function($id, $service) {
 
 
 Route::get('feed', 'FeedController@feed');
+
+
+Route::get('archive', function () {
+	return redirect('archive/index.html');
+});
+
+Route::get('home', function () {
+	return redirect('/');
+});
