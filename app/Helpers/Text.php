@@ -33,7 +33,7 @@ class Text
 
 
 // just the excerpt
-    public static function excerpt($text, $number_of_words = 100, $suffix = '&hellip;')
+    public static function excerpt($text, $number_of_words = 100, $suffix = '[&hellip;]')
     {
         // Where excerpts are concerned, HTML tends to behave
         // like the proverbial ogre in the china shop, so best to strip that

@@ -46,8 +46,8 @@ class FeedController extends Controller
                     NULL,           // Until I feel like adding an author - maybe I'll just hardcode it
                     URL::to('posts/' . $post->slug),
                     $post->published_at,
-                    Text::renderMarkdown($post->body),    // This one is actually the description
-                    Text::renderMarkdown($post->body)
+                    Text::renderMarkdown(Text::excerpt($post->body)),    // This one is actually the description
+                    Text::renderMarkdown(Text::excerpt($post->body))
                 );
             }
 
