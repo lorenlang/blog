@@ -35,7 +35,7 @@ Route::any('share/{id}/{service}', function($id, $service) {
 });
 
 
-Route::get('feed', 'FeedController@feed');
+Route::get('feed', ['as' => 'rss', 'uses' => 'FeedController@feed']);
 
 
 Route::get('home', function () {
