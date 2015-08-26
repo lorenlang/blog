@@ -81,17 +81,6 @@ class Post extends \Eloquent
 
 
     /**
-     * A post can have many comments
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function comments()
-    {
-        return $this->hasMany('App\Comment');
-    }
-
-
-    /**
      * Get all tags assigned to the given post
      *
      * @return Eloquent\Relations\BelongsToMany
