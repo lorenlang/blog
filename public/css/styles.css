@@ -89,6 +89,11 @@ hr {
     border-color: #ccc;
 }
 
+iframe {
+    display: block;
+    margin: auto;
+}
+
 .italic {
     font-style: italic;
 }
