@@ -35,6 +35,8 @@ class Text
 // just the excerpt
     public static function excerpt($text, $number_of_words = 100, $suffix = '[&hellip;]')
     {
+        $original = $text;
+
         // Where excerpts are concerned, HTML tends to behave
         // like the proverbial ogre in the china shop, so best to strip that
         $text = strip_tags($text);
@@ -43,6 +45,11 @@ class Text
         // and hyphenated words like 'range-finder' or "it's"
         // the /s flags means that . matches \n, so this can match multiple lines
         $text = preg_replace("/^\W*((\w[\w'-]*\b\W*){1,$number_of_words}).*/ms", '\\1', $text);
+
+        // If nothing has changed, don't add the ellipsis
+        if ($text == $original) {
+            $suffix = '';
+        }
 
         // strip out newline characters from our excerpt
         return str_replace("\n", "", $text) . $suffix;
