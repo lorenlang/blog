@@ -129,9 +129,6 @@ class PostController extends Controller
 
         $this->syncTags($post, $request->input('tag_list'));
 
-        // TODO:  TEMPORARY - Remove this call after the initial tweet re: latest post is done
-        $this->postTweet($post);
-
         return redirect('posts/' . $post->slug);
     }
 
