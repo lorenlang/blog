@@ -46,9 +46,12 @@ class PostController extends Controller
             return \Response::view('errors/404', array(), 404);
         }
 
+        $prev = $post->previous();
+        $next = $post->next();
+
         event(new PostWasViewed($post));
 
-        return view('posts/show', compact('post'));
+        return view('posts/show', compact('post', 'prev', 'next'));
     }
 
 

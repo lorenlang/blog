@@ -38,4 +38,20 @@
         <div class="post-body">{!! Text::renderMarkdown($post->body) !!}</div>
     </article>
 
+    @if($prev)
+        <div id="prev-link" class="pull-left">
+            <a href="{{ url('posts', $prev->slug) }}">
+                <<&nbsp;&nbsp;{{ $prev->title }}
+            </a>
+        </div>
+    @endif
+
+    @if($next)
+        <div id="next-link" class="pull-right">
+            <a href="{{ url('posts', $next->slug) }}">
+                {{ $next->title }}&nbsp;&nbsp;>>
+            </a>
+        </div>
+    @endif
+
 @stop

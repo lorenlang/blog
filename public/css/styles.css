@@ -51,7 +51,7 @@ footer {
     display: block;
 }
 
-h2, h3, h4, .publish-date {
+h2, h3, h4, .publish-date, #prev-link, #next-link {
     /*font-family: 'gregs_other_handregular';*/
     font-family: 'rock_saltregular';
 }
@@ -59,6 +59,12 @@ h2, h3, h4, .publish-date {
 .publish-date {
     font-size: 11px;
     margin: 25px 0;
+}
+
+#prev-link, #next-link {
+    font-size: 11px;
+    margin-top: 50px;
+    margin-bottom: 0;
 }
 
 li {

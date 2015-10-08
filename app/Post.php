@@ -101,4 +101,16 @@ class Post extends \Eloquent
         return $this->tags->lists('id');
     }
 
+
+    public function previous()
+    {
+        return Post::where('published_at', '<', $this->published_at)->orderBy('published_at', 'desc')->first();
+    }
+
+
+    public function next()
+    {
+        return Post::where('published_at', '>', $this->published_at)->orderBy('published_at')->first();
+    }
+
 }
