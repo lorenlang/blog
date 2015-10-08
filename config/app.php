@@ -143,6 +143,7 @@ return [
         'App\Providers\RouteServiceProvider',
         'Laracasts\Flash\FlashServiceProvider',
         'App\Providers\HelperServiceProvider',
+        'Thujohn\Twitter\TwitterServiceProvider',
 
     ],
     /*
@@ -197,6 +198,7 @@ return [
         'Markdown'      => 'GrahamCampbell\Markdown\Facades\Markdown',
         'Text'          => 'App\Helpers\Text',
         'BrowserDetect' => 'hisorange\BrowserDetect\Facade\Parser',
+        'Twitter' => 'Thujohn\Twitter\Facades\Twitter',
     ],
 
 ];
