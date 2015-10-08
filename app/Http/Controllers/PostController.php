@@ -11,6 +11,7 @@ use App\Tag;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
+use Thujohn\Twitter\Facades\Twitter;
 
 class PostController extends Controller
 {
@@ -105,6 +106,8 @@ class PostController extends Controller
         $this->syncTags($post, $request->input('tag_list'));
 //        $post->tags()->attach($request->input('tag_list'));
 
+        $this->postTweet($post);
+
         flash()->success('The post has been successfully created');
 
         return redirect('posts');
@@ -125,6 +128,9 @@ class PostController extends Controller
         $post->update($request->all());
 
         $this->syncTags($post, $request->input('tag_list'));
+
+        // TODO:  TEMPORARY - Remove this call after the initial tweet re: latest post is done
+        $this->postTweet($post);
 
         return redirect('posts/' . $post->slug);
     }
@@ -162,5 +168,11 @@ class PostController extends Controller
             }
         }
         return $tags;
+    }
+
+    private function postTweet(Post $post)
+    {
+        $status = 'New blog post: ' . $post->title . ' ' . url('posts', $post->slug);
+        Twitter::postTweet(['status' => $status, 'format' => 'json']);
     }
 }
