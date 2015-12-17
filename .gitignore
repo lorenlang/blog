@@ -1,4 +1,8 @@
+.DS_Store
 /vendor
 /node_modules
+/public/images/*.jpg
+/public/archive
 .env
+.idea
 _ide_helper.php
