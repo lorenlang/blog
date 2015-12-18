@@ -67,6 +67,15 @@ h2, h3, h4, .publish-date, #prev-link, #next-link {
     margin-bottom: 0;
 }
 
+.share-links {
+    clear: both;
+}
+
+.share-links > li {
+    margin: 0;
+    padding-right: 0;
+}
+
 li {
     margin-bottom: 10px;
 }
@@ -169,35 +178,6 @@ iframe {
 }
 
 /* ---------------------- */
-
-.share-icon-twitter:before {
-    content: url("/icons/Twitter-24.png");
-}
-
-.share-icon-facebook:before {
-
-    content: url("/icons/Facebook-24.png");
-}
-
-.share-icon-google-plus:before {
-    content: url("/icons/GooglePlus-24.png");
-}
-
-.share-icon-stumbleupon:before {
-    content: url("/icons/StumbleUpon-24.png");
-}
-
-.share-icon-linkedin:before {
-    content: url("/icons/LinkedIn-24.png");
-}
-
-.share-icon-reddit:before {
-    content: url("/icons/Reddit-24.png");
-}
-
-.share-icon-email:before {
-    content: url("/icons/Misc_Mail_02-24.png");
-}
 
 .panel-body > div#image-wrapper {
     position: relative;

@@ -8,8 +8,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="alternate" type="application/rss+xml" title="RSS" href="{{URL::route('rss')}}">
         <link href="{{URL::asset('css/bootstrap.min.css')}}" rel="stylesheet">
-		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-		<!--[if lt IE 9]>
+        {{--<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">--}}
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+        <!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
         <link href="{{URL::asset('css/styles.css')}}" rel="stylesheet">
@@ -64,9 +66,6 @@
             @yield('content')
 
 
-          {{--<a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>--}}
-
-
         </div>
       </div>
 
@@ -76,26 +75,6 @@
 
 
 <hr>
-
-{{--
-<div class="container" id="footer">
-  <div class="row">
-    <div class="col col-sm-12">
-
-      <h4>Follow me</h4>
-      <div class="btn-group">
-       <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
-	   <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
-	   <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
-	   <a class="btn btn-linkedin btn-lg" href="#"><i class="icon-linkedin icon-large"></i> LinkedIn</a>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<hr>
---}}
 
     @include('partials/footer')
 

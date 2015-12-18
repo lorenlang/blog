@@ -19,13 +19,10 @@
 
                 <div class="row">
                     <div class="col-xs-9">
-                        <p>{!! Text::renderMarkdown(Text::excerpt($post->body)) !!}</p>
+                        <p>{!! TextHelper::renderMarkdown(TextHelper::excerpt($post->body)) !!}</p>
                         {{--                        <p>{!! Text::renderMarkdown($post->body) !!}</p>--}}
 
                         <p class="lead">
-
-                            {{--@include('posts/partials/share')--}}
-
                             <a href="{{ url('posts', $post->slug) }}" class="btn btn-default pull-right" role="button">Read
                                 More</a>
                         </p>

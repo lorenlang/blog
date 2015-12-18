@@ -11,7 +11,7 @@ namespace App\Helpers;
 
 use GrahamCampbell\Markdown\Facades\Markdown;
 
-class Text
+class TextHelper
 {
 
     /**
@@ -22,6 +22,7 @@ class Text
      * @param string $suffix
      * @return string
      */
+    // TODO: Is this even used anywhere?
     public static function shorten($string, $limit = 100, $suffix = '…')
     {
         if (strlen($string) < $limit) {
@@ -31,6 +32,8 @@ class Text
         return substr($string, 0, $limit) . $suffix;
     }
 
+
+// TODO : Maybe move this to the Post model and just reference it as $post->excerpt()
 
 // just the excerpt
     public static function excerpt($text, $number_of_words = 100, $suffix = '[&hellip;]')
@@ -74,7 +77,7 @@ class Text
 //        return first_n_words($text, $number_of_words);
 //    }
 
-
+// TODO : Maybe move this to the Post model and just reference it as $post->render()
     public static function renderMarkdown($text)
     {
         return Markdown::convertToHtml($text);

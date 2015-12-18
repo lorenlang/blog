@@ -4,7 +4,7 @@
 //use App\Http\Controllers\Controller;
 //
 //use Illuminate\Http\Request;
-use App\Helpers\Text;
+use App\Helpers\TextHelper;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\URL;
@@ -46,8 +46,9 @@ class FeedController extends Controller
                     NULL,           // Until I feel like adding an author - maybe I'll just hardcode it
                     URL::to('posts/' . $post->slug),
                     $post->published_at,
-                    Text::renderMarkdown(Text::excerpt($post->body)),    // This one is actually the description
-                    Text::renderMarkdown(Text::excerpt($post->body))
+                    TextHelper::renderMarkdown(TextHelper::excerpt($post->body)),
+                    // This one is actually the description
+                    TextHelper::renderMarkdown(TextHelper::excerpt($post->body))
                 );
             }
 

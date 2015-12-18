@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'debug'           => env('APP_DEBUG'),
+    'debug' => env('APP_DEBUG'),
     /*
     |--------------------------------------------------------------------------
     | Application URL
@@ -25,7 +25,7 @@ return [
     |
     */
 
-    'url'             => 'http://localhost',
+    'url'      => 'http://localhost',
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
@@ -38,7 +38,7 @@ return [
     */
 
 //	'timezone' => 'UTC',
-    'timezone'        => 'America/New_York',
+    'timezone' => 'America/New_York',
     /*
     |--------------------------------------------------------------------------
     | Application Locale Configuration
@@ -50,7 +50,7 @@ return [
     |
     */
 
-    'locale'          => 'en',
+    'locale' => 'en',
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
@@ -74,8 +74,8 @@ return [
     |
     */
 
-    'key'             => env('APP_KEY', 'SomeRandomString'),
-    'cipher'          => MCRYPT_RIJNDAEL_128,
+    'key'    => env('APP_KEY', 'SomeRandomString'),
+    'cipher' => MCRYPT_RIJNDAEL_128,
     /*
     |--------------------------------------------------------------------------
     | Logging Configuration
@@ -89,7 +89,7 @@ return [
     |
     */
 
-    'log'             => 'daily',
+    'log' => 'daily',
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
@@ -101,7 +101,7 @@ return [
     |
     */
 
-    'providers'       => [
+    'providers' => [
 
         /*
          * Laravel Framework Service Providers...
@@ -144,6 +144,7 @@ return [
         'Laracasts\Flash\FlashServiceProvider',
         'App\Providers\HelperServiceProvider',
         'Thujohn\Twitter\TwitterServiceProvider',
+        'Chencha\Share\ShareServiceProvider',
 
     ],
     /*
@@ -157,7 +158,7 @@ return [
     |
     */
 
-    'aliases'         => [
+    'aliases' => [
 
         'App'           => 'Illuminate\Support\Facades\App',
         'Artisan'       => 'Illuminate\Support\Facades\Artisan',
@@ -196,9 +197,12 @@ return [
         'Flash'         => 'Laracasts\Flash\Flash',
         'Feed'          => 'Roumen\Feed\Facades\Feed',
         'Markdown'      => 'GrahamCampbell\Markdown\Facades\Markdown',
-        'Text'          => 'App\Helpers\Text',
+        'TextHelper'    => 'App\Helpers\TextHelper',
+        'ArrayHelper'   => 'App\Helpers\ArrayHelper',
         'BrowserDetect' => 'hisorange\BrowserDetect\Facade\Parser',
-        'Twitter' => 'Thujohn\Twitter\Facades\Twitter',
+        'Twitter'       => 'Thujohn\Twitter\Facades\Twitter',
+        'Share'         => 'Chencha\Share\ShareFacade',
+
     ],
 
 ];

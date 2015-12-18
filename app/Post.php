@@ -1,7 +1,9 @@
 <?php namespace App;
 
 //use Illuminate\Database\Eloquent\Model;
+use App\Helpers\ArrayHelper;
 use Carbon\Carbon;
+use Chencha\Share\ShareFacade;
 use Illuminate\Database\Eloquent;
 use Illuminate\Support\Str;
 
@@ -65,7 +67,7 @@ class Post extends \Eloquent
         $this->attributes['title'] = ucfirst($value);
 
         // TODO: Check for unique slug and fix as needed
-        $this->attributes['slug']  = Str::slug($value);
+        $this->attributes['slug'] = Str::slug($value);
     }
 
 
@@ -113,4 +115,17 @@ class Post extends \Eloquent
         return Post::where('published_at', '>', $this->published_at)->orderBy('published_at')->first();
     }
 
+
+    public function shareLinks()
+    {
+        $shareLinks = ShareFacade::load(url('/posts/' . $this->slug), $this->title)
+            ->services('twitter', 'facebook', 'gplus', 'linkedin', 'tumblr', 'pinterest', 'reddit');
+
+        $shareLinks = ArrayHelper::changeKey($shareLinks, 'gplus', 'google-plus');
+
+        $shareLinks['at'] = "mailto:?subject=A blog post you might like&body=I just read this blog post " .
+            "called $this->title.  I thought you might like it.   " . url('/posts/' . $this->slug);
+
+        return $shareLinks;
+    }
 }
