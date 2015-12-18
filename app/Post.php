@@ -122,6 +122,7 @@ class Post extends \Eloquent
             ->services('twitter', 'facebook', 'gplus', 'linkedin', 'tumblr', 'pinterest', 'reddit');
 
         $shareLinks = ArrayHelper::changeKey($shareLinks, 'gplus', 'google-plus');
+        $shareLinks = ArrayHelper::changeKey($shareLinks, 'pinterest', 'pinterest-p');
         $shareLinks = ArrayHelper::changeKey($shareLinks, 'reddit', 'reddit-alien');
 
         $shareLinks['at'] = "mailto:?subject=A blog post you might like&body=I just read this blog post " .
