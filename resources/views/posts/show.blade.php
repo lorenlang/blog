@@ -23,6 +23,13 @@
                 </p>
             @endunless
 
+            @if(Auth::check())
+                <ul class="list-inline pull-right">
+                    <li><a href="{{ url( '/posts/' . $post->slug . '/edit' ) }}"><i class="fa fa-edit fa-2x"></i></a>
+                    </li>
+                </ul>
+            @endif
+
             @if($post->shareLinks())
                 <ul class="pull-right list-inline share-links">
                     <?php $x = 0; ?>
@@ -33,13 +40,6 @@
                 <ul class="pull-right list-inline share-links">
                     @endif
                     @endforeach
-                </ul>
-            @endif
-
-            @if(Auth::check())
-                <ul class="list-inline pull-right">
-                    <li><a href="{{ url( '/posts/' . $post->slug . '/edit' ) }}"><i class="fa fa-edit fa-2x"></i></a>
-                    </li>
                 </ul>
             @endif
 
