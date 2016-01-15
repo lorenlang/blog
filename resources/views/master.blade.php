@@ -88,6 +88,7 @@
             $('div.alert').not('.alert-important').delay(3000).slideUp(300);
         </script>
     @yield('scripts')
+    @include ('/partials/analytics')
     @include ('/partials/piwik')
 
 	</body>
