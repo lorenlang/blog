@@ -96,7 +96,7 @@
 
 <script type="text/javascript" src="http://snaptortoise.github.io/konami-js/konami.js"></script>
 <script type="text/javascript">
-    var konami = new Konami('https://youtube.com/v/gCMw3AhWBkA?autoplay=1&hd=1');
+    var konami = new Konami('http://www.puffgames.com/contra/');
 </script>
 
 @include ('/partials/analytics')
