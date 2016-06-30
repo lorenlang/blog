@@ -31,14 +31,14 @@ class PostController extends Controller
     {
         $posts = Post::latest('published_at')->published()->paginate(5);
 
-        $msg = <<<MSG
-        An update covering the past week is currently being written.
-        Just between us, though, I'm still pretty wiped out so it may 
-        take a couple days to be completed.  It IS coming, though.  
-                
-        Check back soon, dear reader.  Check back soon.
-MSG;
-        flash()->overlay($msg, 'Hey! Look up here...');
+//        $msg = <<<MSG
+//        An update covering the past week is currently being written.
+//        Just between us, though, I'm still pretty wiped out so it may 
+//        take a couple days to be completed.  It IS coming, though.  
+//                
+//        Check back soon, dear reader.  Check back soon.
+//MSG;
+//        flash()->overlay($msg, 'Hey! Look up here...');
 
         return view('posts/index', compact('posts'));
     }
