@@ -22,7 +22,7 @@
         <nav class="collapse navbar-collapse" role="navigation">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="/archive/index.html">Archive</a>
+                    <a href="/archive/index.html">Old Site</a>
                 </li>
                 {{--
                         <li>
