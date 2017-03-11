@@ -24,6 +24,10 @@
                 <li>
                     <a href="/archive/index.html">Old Site</a>
                 </li>
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#subscribeModal">Subscribe</a>
+                </li>
+
                 {{--
                         <li>
                           <a href="#">Category</a>

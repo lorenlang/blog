@@ -23,6 +23,7 @@
 <body>
 
 @include('partials/header')
+@include('partials.subscribe')
 
 <div id="masthead">
     <div class="container">
