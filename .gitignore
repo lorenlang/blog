@@ -1,7 +1,8 @@
 .DS_Store
 /vendor
 /node_modules
-/public/images/*.jpg
+/public/images
+!/public/images/feed-logo.png
 /public/archive
 .env
 .idea
