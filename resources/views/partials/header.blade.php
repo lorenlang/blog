@@ -24,11 +24,9 @@
                 <li>
                     <a href="/archive/index.html">Old Site</a>
                 </li>
-                @if (Auth::check())
                 <li>
                     <a href="/subscribe">Subscribe</a>
                 </li>
-                @endif
 
                 {{--
                         <li>
