@@ -207,7 +207,7 @@ URL: $url
 
 ";
 
-                $headers = 'From: <no-reply@wheresmyhead.com>' . "\r\n";
+                $headers = 'From: <blog@lorenlang.com>' . "\r\n";
 
                 // Always set content-type when sending HTML email
 //                $headers .= "MIME-Version: 1.0" . "\r\n";
