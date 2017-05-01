@@ -54,7 +54,7 @@ return [
 	|
 	*/
 
-	'from' => ['address' => null, 'name' => null],
+	'from' => ['address' => 'no_reply@wheresmyhead.com', 'name' => "Where's My Head?"],
 
 	/*
 	|--------------------------------------------------------------------------

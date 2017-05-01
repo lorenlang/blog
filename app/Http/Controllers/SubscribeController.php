@@ -78,7 +78,6 @@ class SubscribeController extends Controller
 
 // More headers
         $headers .= 'From: <webmaster@example.com>' . "\r\n";
-        $headers .= 'Cc: myboss@example.com' . "\r\n";
 
         mail($to, $subject, $message, $headers);
 
