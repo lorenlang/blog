@@ -41,3 +41,5 @@ Route::get('feed', ['as' => 'rss', 'uses' => 'FeedController@feed']);
 Route::get('home', function () {
 	return redirect('/');
 });
+
+Route::controller('subscribe', 'SubscribeController');

@@ -23,7 +23,6 @@
 <body>
 
 @include('partials/header')
-@include('partials.subscribe')
 
 <div id="masthead">
     <div class="container">
@@ -61,7 +60,7 @@
                 <div class="panel-body">
 
 
-                    {{--@include('partials/flash')--}}
+                    @include('posts.partials.messages')
                     @include('flash::message')
 
                     @yield('content')

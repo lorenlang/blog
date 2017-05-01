@@ -8,9 +8,11 @@ use App\Http\Requests\PostRequest;
 use App\Post;
 
 //use Illuminate\Http\Request;
+use App\Subscriber;
 use App\Tag;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Request;
 use Thujohn\Twitter\Facades\Twitter;
 
@@ -116,7 +118,8 @@ class PostController extends Controller
         $this->syncTags($post, $request->input('tag_list'));
 //        $post->tags()->attach($request->input('tag_list'));
 
-        $this->postTweet($post);
+//        $this->postTweet($post);
+
 
         flash()->success('The post has been successfully created');
 
@@ -179,7 +182,24 @@ class PostController extends Controller
 
     private function postTweet(Post $post)
     {
-        $status = 'New blog post: ' . $post->title . ' ' . url('posts', $post->slug);
-        Twitter::postTweet(['status' => $status, 'format' => 'json']);
+//        $status = 'New blog post: ' . $post->title . ' ' . url('posts', $post->slug);
+//        Twitter::postTweet(['status' => $status, 'format' => 'json']);
+    }
+
+    private function notifySubscribers(Post $post)
+    {
+
+        Subscriber::all()->each(function ($subscriber){
+
+            $subj = 'Blog post notification from wheresmyhead.com';
+
+            Mail::send('emails.notify', ['title' => $post->title, 'slug' => $post->slug], function($message) use ($subj, $subscriber)
+            {
+                $message->to($subscriber->email)->subject($subj);
+            });
+        } );
+
+
+
     }
 }
