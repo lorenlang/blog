@@ -119,6 +119,7 @@ class PostController extends Controller
 //        $post->tags()->attach($request->input('tag_list'));
 
 //        $this->postTweet($post);
+        $this->notifySubscribers($post);
 
 
         flash()->success('The post has been successfully created');
@@ -189,17 +190,36 @@ class PostController extends Controller
     private function notifySubscribers(Post $post)
     {
 
-        Subscriber::all()->each(function ($subscriber){
+        $subj  = 'Blog post notification from wheresmyhead.com';
+        $title = $post->title;
+        $url   = url('posts/' . $post->slug);
 
-            $subj = 'Blog post notification from wheresmyhead.com';
+        Subscriber::all()->each(
+            function ($subscriber) use ($subj, $title, $url) {
 
-            Mail::send('emails.notify', ['title' => $post->title, 'slug' => $post->slug], function($message) use ($subj, $subscriber)
-            {
-                $message->to($subscriber->email)->subject($subj);
-            });
-        } );
+                $to = $subscriber->email;
 
+                $message = "
+A new entry has been posted on the Where's My Head? blog.
+
+Title: $title
+URL: $url
+
+";
+
+                $headers = 'From: <no-reply@wheresmyhead.com>' . "\r\n";
+
+                // Always set content-type when sending HTML email
+//                $headers .= "MIME-Version: 1.0" . "\r\n";
+//                $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+                mail($to, $subj, $message, $headers);
+
+            }
+        );
 
 
     }
+
+
 }
