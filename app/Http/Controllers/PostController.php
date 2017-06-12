@@ -118,7 +118,7 @@ class PostController extends Controller
         $this->syncTags($post, $request->input('tag_list'));
 //        $post->tags()->attach($request->input('tag_list'));
 
-        $this->postTweet($post);
+//        $this->postTweet($post);
         $this->notifySubscribers($post);
 
 
