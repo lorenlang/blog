@@ -205,6 +205,9 @@ A new entry has been posted on the Where's My Head? blog.
 Title: $title
 URL: $url
 
+
+NOTE: Vastly improved notifications coming soon.  
+      Keep the faith and keep watching this space.
 ";
 
                 $headers = 'From: <blog@lorenlang.com>' . "\r\n";
